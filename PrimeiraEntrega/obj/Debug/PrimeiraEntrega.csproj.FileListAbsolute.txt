@@ -11,3 +11,16 @@ C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\Primeir
 C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\bin\Debug\MagicTrickServer.dll
 C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\bin\Debug\MagicTrickServer.xml
 C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\Primeira.441A475A.Up2Date
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\bin\Debug\PrimeiraEntrega.exe.config
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\bin\Debug\PrimeiraEntrega.exe
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\bin\Debug\PrimeiraEntrega.pdb
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\bin\Debug\MagicTrickServer.dll
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\bin\Debug\MagicTrickServer.xml
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.csproj.AssemblyReference.cache
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.PrimeiraEntrega.resources
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.Properties.Resources.resources
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.csproj.GenerateResource.cache
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.csproj.CoreCompileInputs.cache
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.csproj.CopyComplete
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.exe
+C:\Users\kayke\OneDrive\Documentos\Lições e Trabalhos\Senac\Projeto Integrador - 3° Semestre\Projeto-Integrador-III-Sistema-Autonomo\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.pdb

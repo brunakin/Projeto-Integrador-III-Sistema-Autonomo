@@ -14,12 +14,12 @@ namespace PrimeiraEntrega
     public partial class PrimeiraEntrega : Form
     {
         string tipoDePartida;
-        string nomeDoGrupo = "Copenhaque";
+        string nomeDoGrupo = "Copenhague";
 
         public PrimeiraEntrega()
         {
             InitializeComponent();
-            //ja começar selecionando todas no parametro
+            // Deixa "Todas" como elemento padrão que já vem selecionado na ComboBox 
             cboTipoDePartida.SelectedIndex = 0;
             this.tipoDePartida = cboTipoDePartida.SelectedItem.ToString();
         }
@@ -31,12 +31,12 @@ namespace PrimeiraEntrega
 
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
-            //pegando so a primeira letra do tipo de partida para jogar pro servidor
+            // Pegando a primeira letra do tipo de partida 
             string retorno = Jogo.ListarPartidas(this.tipoDePartida.Substring(0,1));
             retorno = retorno.Replace("\r", "");
             retorno = retorno.Substring(0,retorno.Length-1);
 
-            //listar a partida
+            // Listar a partida
             string[] partidas = retorno.Split('\n');
             lstPartidas.Items.Clear();
 
@@ -64,15 +64,16 @@ namespace PrimeiraEntrega
             else
                 status = "Finalizada";
 
-            //mostrar info da partida selecionada
+            // Mostrar informações da partida selecionada
             txtNomePartida.Text = nomePartida;
             txtIdPartida.Text = idPartida.ToString();
             lblDataPartida.Text = "Data de Criação: " + data;
             lblStatus.Text = "Status: " + status;
 
-            //mostrar jogadores
+            // Mostrar jogadores
             string retorno = Jogo.ListarJogadores(idPartida);
             retorno = retorno.Replace("\r", "");
+            retorno = retorno.Substring(0, retorno.Length - 1);
             string[] jogadores = retorno.Split('\n');
 
             lstJogadores.Items.Clear();
@@ -87,7 +88,7 @@ namespace PrimeiraEntrega
             string nome = txtNomePartida.Text;
             string senha = txtSenhaPartida.Text;
             string retorno = Jogo.CriarPartida(nome, senha, this.nomeDoGrupo);
-            if(retorno == "ERRO: Partida já existente" || retorno == "ERRO: Senha obrigatória" || retorno == "ERRO:Nome da partida está vazio")
+            if(retorno == "ERRO: Partida já existente" || retorno == "ERRO: Senha obrigatória" || retorno == "ERRO: Nome da partida está vazio")
             {
                 lblStatus.Text = "Status: " + retorno;
             }
