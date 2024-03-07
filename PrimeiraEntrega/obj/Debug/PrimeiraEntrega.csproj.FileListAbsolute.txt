@@ -1,0 +1,13 @@
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\bin\Debug\PrimeiraEntrega.exe.config
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\bin\Debug\PrimeiraEntrega.exe
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\bin\Debug\PrimeiraEntrega.pdb
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.csproj.AssemblyReference.cache
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.PrimeiraEntrega.resources
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.Properties.Resources.resources
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.csproj.GenerateResource.cache
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.csproj.CoreCompileInputs.cache
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.exe
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\PrimeiraEntrega.pdb
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\bin\Debug\MagicTrickServer.dll
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\bin\Debug\MagicTrickServer.xml
+C:\Users\Kyang\source\repos\PI\PrimeiraEntrega\PrimeiraEntrega\obj\Debug\Primeira.441A475A.Up2Date
