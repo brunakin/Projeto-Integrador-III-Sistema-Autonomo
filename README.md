@@ -1,9 +1,12 @@
 # Projeto-Integrador-III-Sistema-Autonomo
 Grupo: Copenhague
+
 Integrantes: Kayke Ahrens, Agatha Barbosa, Bruna Kinjo, Caio Xavier
 
 # Sobre o Projeto
-• Consiste em desenvolver um sistema autônomo para uma competição entre grupos dos alunos de Ciência da Computação - 3° Semestre. O sistema autônomo é baseado em um jogo de cartas chamado Magic Trick.
+• Consiste em desenvolver um sistema autônomo para uma competição entre grupos dos alunos de Ciência da Computação - 3° Semestre. 
+
+• O sistema autônomo é baseado em um jogo de cartas chamado Magic Trick.
 
 # Sobre o Jogo
 • Magic Trick é um jogo de rodadas, que baseia-se num baralho de 7 naipes, com 8 cartas por naipe (0-7). Os jogadores não podem ver a face de suas cartas, apenas o naipe no verso, e precisam deduzir quais cartas possuem o mais rápido possível na rodada. Eles são ajudados pelo fato de que seu vizinho classifica as cartas sequencialmente por valor no início da mão.
