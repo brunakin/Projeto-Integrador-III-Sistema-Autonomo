@@ -19,7 +19,7 @@ namespace PrimeiraEntrega
         public PrimeiraEntrega()
         {
             InitializeComponent();
-            // Deixa "Todas" como elemento padrão que já vem selecionado na ComboBox 
+            // Deixa "Todas" como elemento que já vem selecionado por padrão na ComboBox 
             cboTipoDePartida.SelectedIndex = 0;
             this.tipoDePartida = cboTipoDePartida.SelectedItem.ToString();
         }
