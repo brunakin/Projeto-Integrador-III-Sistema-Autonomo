@@ -39,7 +39,6 @@ namespace PrimeiraEntrega
             // Listar a partida
             string[] partidas = retorno.Split('\n');
             lstPartidas.Items.Clear();
-
             for (int i = 0; i < partidas.Length; i++)
             {
                 lstPartidas.Items.Add(partidas[i]);
@@ -71,16 +70,26 @@ namespace PrimeiraEntrega
             lblStatus.Text = "Status: " + status;
 
             // Mostrar jogadores
+            string[] jogadores;
             string retorno = Jogo.ListarJogadores(idPartida);
-            retorno = retorno.Replace("\r", "");
-            retorno = retorno.Substring(0, retorno.Length - 1);
-            string[] jogadores = retorno.Split('\n');
-
-            lstJogadores.Items.Clear();
-            for (int i = 0; i < jogadores.Length; i++)
+            if(retorno.Length < 1)
             {
-                lstJogadores.Items.Add(jogadores[i]);
+                retorno = "Não há jogadores na sala.";
+                lstJogadores.Items.Clear();
+                lstJogadores.Items.Add(retorno);
             }
+            else
+            {
+                retorno = retorno.Replace("\r", "");
+                retorno = retorno.Substring(0, retorno.Length - 1);
+                jogadores = retorno.Split('\n');
+                lstJogadores.Items.Clear();
+                for (int i = 0; i < jogadores.Length; i++)
+                {
+                    lstJogadores.Items.Add(jogadores[i]);
+                }
+            }
+            
         }
 
         private void btnCriarPartida_Click(object sender, EventArgs e)
@@ -88,7 +97,7 @@ namespace PrimeiraEntrega
             string nome = txtNomePartida.Text;
             string senha = txtSenhaPartida.Text;
             string retorno = Jogo.CriarPartida(nome, senha, this.nomeDoGrupo);
-            if(retorno == "ERRO: Partida já existente" || retorno == "ERRO: Senha obrigatória" || retorno == "ERRO: Nome da partida está vazio")
+            if(retorno == "ERRO: Partida já existente" || retorno == "ERRO: Senha obrigatória" || retorno == "ERRO: Nome da partida está vazio" || retorno == "ERRO:Senha com mais de 10 caracteres")
             {
                 lblStatus.Text = "Status: " + retorno;
             }
