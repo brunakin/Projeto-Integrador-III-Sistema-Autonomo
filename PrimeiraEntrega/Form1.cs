@@ -97,7 +97,7 @@ namespace PrimeiraEntrega
             string nome = txtNomePartida.Text;
             string senha = txtSenhaPartida.Text;
             string retorno = Jogo.CriarPartida(nome, senha, this.nomeDoGrupo);
-            if(retorno == "ERRO: Partida já existente" || retorno == "ERRO: Senha obrigatória" || retorno == "ERRO: Nome da partida está vazio" || retorno == "ERRO:Senha com mais de 10 caracteres")
+            if(retorno.Contains("ERRO:"))
             {
                 lblStatus.Text = "Status: " + retorno;
             }
