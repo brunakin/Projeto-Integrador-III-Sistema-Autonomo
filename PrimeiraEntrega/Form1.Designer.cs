@@ -48,6 +48,8 @@
             this.txtIdJogador = new System.Windows.Forms.TextBox();
             this.lblIdJogador = new System.Windows.Forms.Label();
             this.btnEntrarPartida = new System.Windows.Forms.Button();
+            this.txtSenhaJogador = new System.Windows.Forms.TextBox();
+            this.lblSenhaJogador = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -133,7 +135,7 @@
             // lblDataPartida
             // 
             this.lblDataPartida.AutoSize = true;
-            this.lblDataPartida.Location = new System.Drawing.Point(253, 86);
+            this.lblDataPartida.Location = new System.Drawing.Point(446, 59);
             this.lblDataPartida.Name = "lblDataPartida";
             this.lblDataPartida.Size = new System.Drawing.Size(90, 13);
             this.lblDataPartida.TabIndex = 8;
@@ -141,9 +143,9 @@
             // 
             // btnCriarPartida
             // 
-            this.btnCriarPartida.Location = new System.Drawing.Point(257, 285);
+            this.btnCriarPartida.Location = new System.Drawing.Point(449, 115);
             this.btnCriarPartida.Name = "btnCriarPartida";
-            this.btnCriarPartida.Size = new System.Drawing.Size(132, 46);
+            this.btnCriarPartida.Size = new System.Drawing.Size(167, 34);
             this.btnCriarPartida.TabIndex = 9;
             this.btnCriarPartida.Text = "Criar Partida";
             this.btnCriarPartida.UseVisualStyleBackColor = true;
@@ -182,7 +184,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(257, 229);
+            this.lblStatus.Location = new System.Drawing.Point(446, 86);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(40, 13);
             this.lblStatus.TabIndex = 16;
@@ -191,7 +193,7 @@
             // lblNomeJogador
             // 
             this.lblNomeJogador.AutoSize = true;
-            this.lblNomeJogador.Location = new System.Drawing.Point(257, 113);
+            this.lblNomeJogador.Location = new System.Drawing.Point(254, 86);
             this.lblNomeJogador.Name = "lblNomeJogador";
             this.lblNomeJogador.Size = new System.Drawing.Size(94, 13);
             this.lblNomeJogador.TabIndex = 17;
@@ -199,22 +201,22 @@
             // 
             // txtNomeJogador
             // 
-            this.txtNomeJogador.Location = new System.Drawing.Point(257, 129);
+            this.txtNomeJogador.Location = new System.Drawing.Point(257, 102);
             this.txtNomeJogador.Name = "txtNomeJogador";
             this.txtNomeJogador.Size = new System.Drawing.Size(167, 20);
             this.txtNomeJogador.TabIndex = 18;
             // 
             // txtIdJogador
             // 
-            this.txtIdJogador.Location = new System.Drawing.Point(257, 178);
+            this.txtIdJogador.Location = new System.Drawing.Point(335, 133);
             this.txtIdJogador.Name = "txtIdJogador";
-            this.txtIdJogador.Size = new System.Drawing.Size(91, 20);
+            this.txtIdJogador.Size = new System.Drawing.Size(89, 20);
             this.txtIdJogador.TabIndex = 20;
             // 
             // lblIdJogador
             // 
             this.lblIdJogador.AutoSize = true;
-            this.lblIdJogador.Location = new System.Drawing.Point(254, 162);
+            this.lblIdJogador.Location = new System.Drawing.Point(254, 136);
             this.lblIdJogador.Name = "lblIdJogador";
             this.lblIdJogador.Size = new System.Drawing.Size(75, 13);
             this.lblIdJogador.TabIndex = 19;
@@ -222,12 +224,29 @@
             // 
             // btnEntrarPartida
             // 
-            this.btnEntrarPartida.Location = new System.Drawing.Point(257, 350);
+            this.btnEntrarPartida.Location = new System.Drawing.Point(449, 155);
             this.btnEntrarPartida.Name = "btnEntrarPartida";
-            this.btnEntrarPartida.Size = new System.Drawing.Size(132, 46);
+            this.btnEntrarPartida.Size = new System.Drawing.Size(167, 34);
             this.btnEntrarPartida.TabIndex = 21;
             this.btnEntrarPartida.Text = "Entrar Partida";
             this.btnEntrarPartida.UseVisualStyleBackColor = true;
+            this.btnEntrarPartida.Click += new System.EventHandler(this.btnEntrarPartida_Click);
+            // 
+            // txtSenhaJogador
+            // 
+            this.txtSenhaJogador.Location = new System.Drawing.Point(357, 163);
+            this.txtSenhaJogador.Name = "txtSenhaJogador";
+            this.txtSenhaJogador.Size = new System.Drawing.Size(67, 20);
+            this.txtSenhaJogador.TabIndex = 23;
+            // 
+            // lblSenhaJogador
+            // 
+            this.lblSenhaJogador.AutoSize = true;
+            this.lblSenhaJogador.Location = new System.Drawing.Point(254, 166);
+            this.lblSenhaJogador.Name = "lblSenhaJogador";
+            this.lblSenhaJogador.Size = new System.Drawing.Size(97, 13);
+            this.lblSenhaJogador.TabIndex = 22;
+            this.lblSenhaJogador.Text = "Senha do Jogador:";
             // 
             // PrimeiraEntrega
             // 
@@ -235,6 +254,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 699);
+            this.Controls.Add(this.txtSenhaJogador);
+            this.Controls.Add(this.lblSenhaJogador);
             this.Controls.Add(this.btnEntrarPartida);
             this.Controls.Add(this.txtIdJogador);
             this.Controls.Add(this.lblIdJogador);
@@ -286,6 +307,8 @@
         private System.Windows.Forms.TextBox txtIdJogador;
         private System.Windows.Forms.Label lblIdJogador;
         private System.Windows.Forms.Button btnEntrarPartida;
+        private System.Windows.Forms.TextBox txtSenhaJogador;
+        private System.Windows.Forms.Label lblSenhaJogador;
     }
 }
 

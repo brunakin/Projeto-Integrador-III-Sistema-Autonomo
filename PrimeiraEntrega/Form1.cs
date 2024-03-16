@@ -107,5 +107,26 @@ namespace PrimeiraEntrega
                 lblStatus.Text = "Status: Partida criada com sucesso";
             }
         }
+
+        private void btnEntrarPartida_Click(object sender, EventArgs e)
+        {
+            string idPartida = txtIdPartida.Text;
+            string senhaPartida = txtSenhaPartida.Text;
+            string nomeJogador = txtNomeJogador.Text;
+            string retorno = Jogo.EntrarPartida(int.Parse(idPartida), nomeJogador, senhaPartida);
+            if (retorno.Contains("ERRO"))
+            {
+                lblStatus.Text = "Status: " + retorno;
+            }
+            else
+            {
+                string[] info = retorno.Split(',');
+                string idJogador = info[0];
+                string senhaJogador = info[1];
+                txtIdJogador.Text = idJogador;
+                txtSenhaJogador.Text= senhaJogador;
+                lblStatus.Text = "Status: Jogador entrou na partida com sucesso";
+            }
+        }
     }
 }
