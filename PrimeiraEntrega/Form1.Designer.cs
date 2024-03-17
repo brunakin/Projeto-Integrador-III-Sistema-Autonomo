@@ -92,7 +92,7 @@
             // lblGrupo
             // 
             this.lblGrupo.AutoSize = true;
-            this.lblGrupo.Location = new System.Drawing.Point(27, 677);
+            this.lblGrupo.Location = new System.Drawing.Point(27, 402);
             this.lblGrupo.Name = "lblGrupo";
             this.lblGrupo.Size = new System.Drawing.Size(68, 13);
             this.lblGrupo.TabIndex = 3;
@@ -101,7 +101,7 @@
             // lblDll
             // 
             this.lblDll.AutoSize = true;
-            this.lblDll.Location = new System.Drawing.Point(175, 677);
+            this.lblDll.Location = new System.Drawing.Point(175, 402);
             this.lblDll.Name = "lblDll";
             this.lblDll.Size = new System.Drawing.Size(99, 13);
             this.lblDll.TabIndex = 4;
@@ -264,7 +264,7 @@
             // 
             this.lblTurno.AutoSize = true;
             this.lblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.lblTurno.Location = new System.Drawing.Point(254, 242);
+            this.lblTurno.Location = new System.Drawing.Point(254, 272);
             this.lblTurno.Name = "lblTurno";
             this.lblTurno.Size = new System.Drawing.Size(130, 17);
             this.lblTurno.TabIndex = 25;
@@ -275,7 +275,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 699);
+            this.ClientSize = new System.Drawing.Size(721, 424);
             this.Controls.Add(this.lblTurno);
             this.Controls.Add(this.btnIniciarPartida);
             this.Controls.Add(this.txtSenhaJogador);
