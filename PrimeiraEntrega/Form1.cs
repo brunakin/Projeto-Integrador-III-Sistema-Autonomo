@@ -128,5 +128,36 @@ namespace PrimeiraEntrega
                 lblStatus.Text = "Status: Jogador entrou na partida com sucesso";
             }
         }
+
+        private void btnIniciarPartida_Click(object sender, EventArgs e)
+        {
+            string senhaJogador = txtSenhaJogador.Text;
+            string idJogador = txtIdJogador.Text;
+            string retorno = Jogo.IniciarPartida(int.Parse(idJogador), senhaJogador);
+            if (retorno.Contains("ERRO"))
+            {
+                lblStatus.Text = "Status: " + retorno;
+            }
+            else
+            {
+                string idPartida = txtIdPartida.Text;
+                string[] jogadores;
+                string jogadoresNaSala = Jogo.ListarJogadores(int.Parse(idPartida));
+                jogadoresNaSala = jogadoresNaSala.Replace("\r", "");
+                jogadoresNaSala = jogadoresNaSala.Substring(0, jogadoresNaSala.Length - 1);
+                jogadores = jogadoresNaSala.Split('\n');
+                string[] jogadorSorteado;
+                if (jogadores[0].Contains(retorno))
+                {
+                    jogadorSorteado = jogadores[0].Split(',');
+                    lblTurno.Text = "Turno do Jogador: " + jogadorSorteado[1] + "\n\r Id do Jogador: " + jogadorSorteado[0];
+                }
+                else
+                {
+                    jogadorSorteado = jogadores[1].Split(',');
+                    lblTurno.Text = "Turno do Jogador: " + jogadorSorteado[1] + "\n\r Id do Jogador: " + jogadorSorteado[0]; 
+                }
+            }
+        }
     }
 }

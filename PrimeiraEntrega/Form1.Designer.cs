@@ -50,6 +50,8 @@
             this.btnEntrarPartida = new System.Windows.Forms.Button();
             this.txtSenhaJogador = new System.Windows.Forms.TextBox();
             this.lblSenhaJogador = new System.Windows.Forms.Label();
+            this.btnIniciarPartida = new System.Windows.Forms.Button();
+            this.lblTurno = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -111,7 +113,7 @@
             this.lstJogadores.Location = new System.Drawing.Point(30, 272);
             this.lstJogadores.Name = "lstJogadores";
             this.lstJogadores.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lstJogadores.Size = new System.Drawing.Size(209, 147);
+            this.lstJogadores.Size = new System.Drawing.Size(209, 69);
             this.lstJogadores.TabIndex = 5;
             // 
             // lblNomePartida
@@ -248,12 +250,34 @@
             this.lblSenhaJogador.TabIndex = 22;
             this.lblSenhaJogador.Text = "Senha do Jogador:";
             // 
+            // btnIniciarPartida
+            // 
+            this.btnIniciarPartida.Location = new System.Drawing.Point(348, 195);
+            this.btnIniciarPartida.Name = "btnIniciarPartida";
+            this.btnIniciarPartida.Size = new System.Drawing.Size(167, 34);
+            this.btnIniciarPartida.TabIndex = 24;
+            this.btnIniciarPartida.Text = "Iniciar Partida";
+            this.btnIniciarPartida.UseVisualStyleBackColor = true;
+            this.btnIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
+            // 
+            // lblTurno
+            // 
+            this.lblTurno.AutoSize = true;
+            this.lblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.lblTurno.Location = new System.Drawing.Point(254, 242);
+            this.lblTurno.Name = "lblTurno";
+            this.lblTurno.Size = new System.Drawing.Size(130, 17);
+            this.lblTurno.TabIndex = 25;
+            this.lblTurno.Text = "Turno do Jogador: ";
+            // 
             // PrimeiraEntrega
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 699);
+            this.Controls.Add(this.lblTurno);
+            this.Controls.Add(this.btnIniciarPartida);
             this.Controls.Add(this.txtSenhaJogador);
             this.Controls.Add(this.lblSenhaJogador);
             this.Controls.Add(this.btnEntrarPartida);
@@ -309,6 +333,8 @@
         private System.Windows.Forms.Button btnEntrarPartida;
         private System.Windows.Forms.TextBox txtSenhaJogador;
         private System.Windows.Forms.Label lblSenhaJogador;
+        private System.Windows.Forms.Button btnIniciarPartida;
+        private System.Windows.Forms.Label lblTurno;
     }
 }
 
