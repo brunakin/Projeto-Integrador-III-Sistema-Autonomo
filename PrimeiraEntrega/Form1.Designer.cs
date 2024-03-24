@@ -1,4 +1,4 @@
-﻿namespace PrimeiraEntrega
+namespace PrimeiraEntrega
 {
     partial class PrimeiraEntrega
     {
@@ -52,6 +52,8 @@
             this.lblSenhaJogador = new System.Windows.Forms.Label();
             this.btnIniciarPartida = new System.Windows.Forms.Button();
             this.lblTurno = new System.Windows.Forms.Label();
+            this.lstCartas = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -270,12 +272,31 @@
             this.lblTurno.TabIndex = 25;
             this.lblTurno.Text = "Turno do Jogador: ";
             // 
+            // lstCartas
+            // 
+            this.lstCartas.FormattingEnabled = true;
+            this.lstCartas.Location = new System.Drawing.Point(567, 272);
+            this.lstCartas.Name = "lstCartas";
+            this.lstCartas.Size = new System.Drawing.Size(120, 134);
+            this.lstCartas.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(583, 256);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Cartas da Partida";
+            // 
             // PrimeiraEntrega
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(721, 424);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lstCartas);
             this.Controls.Add(this.lblTurno);
             this.Controls.Add(this.btnIniciarPartida);
             this.Controls.Add(this.txtSenhaJogador);
@@ -335,6 +356,8 @@
         private System.Windows.Forms.Label lblSenhaJogador;
         private System.Windows.Forms.Button btnIniciarPartida;
         private System.Windows.Forms.Label lblTurno;
+        private System.Windows.Forms.ListBox lstCartas;
+        private System.Windows.Forms.Label label1;
     }
 }
 
