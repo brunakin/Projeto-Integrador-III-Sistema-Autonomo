@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -156,6 +156,29 @@ namespace PrimeiraEntrega
                 {
                     jogadorSorteado = jogadores[1].Split(',');
                     lblTurno.Text = "Turno do Jogador: " + jogadorSorteado[1] + "\n\r Id do Jogador: " + jogadorSorteado[0]; 
+                }
+                ExibirCartas(jogadores.Length);
+            }
+        }
+
+        private void ExibirCartas(int jogadores)
+        {
+            string idPartida = txtIdPartida.Text; // Pega o ID da partida
+
+            string retornoCartas = Jogo.ConsultarMao(int.Parse(idPartida));  // Retorna o jogador, naipe e posição
+            retornoCartas = retornoCartas.Substring(0, retornoCartas.Length - 1);
+
+            string[] cartasJogador = retornoCartas.Split('\n'); // Separando as cartas dos jogadores
+
+            lstCartas.Items.Clear(); // Limpa a lista de cartas
+      
+            for(int i = 0; i < cartasJogador.Length; i++)
+            {
+                string dadosJogador = cartasJogador[i];
+                lstCartas.Items.Add(dadosJogador);
+                if (i == 11)
+                {
+                    lstCartas.Items.Add("\n");
                 }
             }
         }
