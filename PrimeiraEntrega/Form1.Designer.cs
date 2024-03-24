@@ -54,6 +54,14 @@ namespace PrimeiraEntrega
             this.lblTurno = new System.Windows.Forms.Label();
             this.lstCartas = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtIdCarta = new System.Windows.Forms.TextBox();
+            this.lblIdCarta = new System.Windows.Forms.Label();
+            this.btnApostar = new System.Windows.Forms.Button();
+            this.btnJogar = new System.Windows.Forms.Button();
+            this.lblValorCarta = new System.Windows.Forms.Label();
+            this.lstJogadas = new System.Windows.Forms.ListBox();
+            this.lblJogadas = new System.Windows.Forms.Label();
+            this.btnVerificarVez = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnListarPartidas
@@ -69,10 +77,10 @@ namespace PrimeiraEntrega
             // lstPartidas
             // 
             this.lstPartidas.FormattingEnabled = true;
-            this.lstPartidas.Location = new System.Drawing.Point(30, 86);
+            this.lstPartidas.Location = new System.Drawing.Point(30, 64);
             this.lstPartidas.Name = "lstPartidas";
             this.lstPartidas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lstPartidas.Size = new System.Drawing.Size(209, 173);
+            this.lstPartidas.Size = new System.Drawing.Size(209, 199);
             this.lstPartidas.TabIndex = 1;
             this.lstPartidas.SelectedIndexChanged += new System.EventHandler(this.lstPartidas_SelectedIndexChanged);
             // 
@@ -94,7 +102,7 @@ namespace PrimeiraEntrega
             // lblGrupo
             // 
             this.lblGrupo.AutoSize = true;
-            this.lblGrupo.Location = new System.Drawing.Point(27, 402);
+            this.lblGrupo.Location = new System.Drawing.Point(27, 362);
             this.lblGrupo.Name = "lblGrupo";
             this.lblGrupo.Size = new System.Drawing.Size(68, 13);
             this.lblGrupo.TabIndex = 3;
@@ -103,7 +111,7 @@ namespace PrimeiraEntrega
             // lblDll
             // 
             this.lblDll.AutoSize = true;
-            this.lblDll.Location = new System.Drawing.Point(175, 402);
+            this.lblDll.Location = new System.Drawing.Point(114, 362);
             this.lblDll.Name = "lblDll";
             this.lblDll.Size = new System.Drawing.Size(99, 13);
             this.lblDll.TabIndex = 4;
@@ -139,7 +147,7 @@ namespace PrimeiraEntrega
             // lblDataPartida
             // 
             this.lblDataPartida.AutoSize = true;
-            this.lblDataPartida.Location = new System.Drawing.Point(446, 59);
+            this.lblDataPartida.Location = new System.Drawing.Point(438, 58);
             this.lblDataPartida.Name = "lblDataPartida";
             this.lblDataPartida.Size = new System.Drawing.Size(90, 13);
             this.lblDataPartida.TabIndex = 8;
@@ -147,7 +155,7 @@ namespace PrimeiraEntrega
             // 
             // btnCriarPartida
             // 
-            this.btnCriarPartida.Location = new System.Drawing.Point(449, 115);
+            this.btnCriarPartida.Location = new System.Drawing.Point(439, 86);
             this.btnCriarPartida.Name = "btnCriarPartida";
             this.btnCriarPartida.Size = new System.Drawing.Size(167, 34);
             this.btnCriarPartida.TabIndex = 9;
@@ -165,7 +173,7 @@ namespace PrimeiraEntrega
             // lblSenhaPartida
             // 
             this.lblSenhaPartida.AutoSize = true;
-            this.lblSenhaPartida.Location = new System.Drawing.Point(444, 11);
+            this.lblSenhaPartida.Location = new System.Drawing.Point(436, 10);
             this.lblSenhaPartida.Name = "lblSenhaPartida";
             this.lblSenhaPartida.Size = new System.Drawing.Size(92, 13);
             this.lblSenhaPartida.TabIndex = 12;
@@ -173,7 +181,7 @@ namespace PrimeiraEntrega
             // 
             // txtSenhaPartida
             // 
-            this.txtSenhaPartida.Location = new System.Drawing.Point(447, 27);
+            this.txtSenhaPartida.Location = new System.Drawing.Point(441, 27);
             this.txtSenhaPartida.Name = "txtSenhaPartida";
             this.txtSenhaPartida.Size = new System.Drawing.Size(167, 20);
             this.txtSenhaPartida.TabIndex = 13;
@@ -188,7 +196,7 @@ namespace PrimeiraEntrega
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(446, 86);
+            this.lblStatus.Location = new System.Drawing.Point(254, 362);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(40, 13);
             this.lblStatus.TabIndex = 16;
@@ -228,7 +236,7 @@ namespace PrimeiraEntrega
             // 
             // btnEntrarPartida
             // 
-            this.btnEntrarPartida.Location = new System.Drawing.Point(449, 155);
+            this.btnEntrarPartida.Location = new System.Drawing.Point(439, 126);
             this.btnEntrarPartida.Name = "btnEntrarPartida";
             this.btnEntrarPartida.Size = new System.Drawing.Size(167, 34);
             this.btnEntrarPartida.TabIndex = 21;
@@ -254,7 +262,7 @@ namespace PrimeiraEntrega
             // 
             // btnIniciarPartida
             // 
-            this.btnIniciarPartida.Location = new System.Drawing.Point(348, 195);
+            this.btnIniciarPartida.Location = new System.Drawing.Point(439, 166);
             this.btnIniciarPartida.Name = "btnIniciarPartida";
             this.btnIniciarPartida.Size = new System.Drawing.Size(167, 34);
             this.btnIniciarPartida.TabIndex = 24;
@@ -266,7 +274,7 @@ namespace PrimeiraEntrega
             // 
             this.lblTurno.AutoSize = true;
             this.lblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.lblTurno.Location = new System.Drawing.Point(254, 272);
+            this.lblTurno.Location = new System.Drawing.Point(436, 259);
             this.lblTurno.Name = "lblTurno";
             this.lblTurno.Size = new System.Drawing.Size(130, 17);
             this.lblTurno.TabIndex = 25;
@@ -275,26 +283,107 @@ namespace PrimeiraEntrega
             // lstCartas
             // 
             this.lstCartas.FormattingEnabled = true;
-            this.lstCartas.Location = new System.Drawing.Point(567, 272);
+            this.lstCartas.Location = new System.Drawing.Point(640, 26);
             this.lstCartas.Name = "lstCartas";
-            this.lstCartas.Size = new System.Drawing.Size(120, 134);
+            this.lstCartas.Size = new System.Drawing.Size(131, 316);
             this.lstCartas.TabIndex = 26;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(583, 256);
+            this.label1.Location = new System.Drawing.Point(637, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 27;
             this.label1.Text = "Cartas da Partida";
+            // 
+            // txtIdCarta
+            // 
+            this.txtIdCarta.Location = new System.Drawing.Point(330, 213);
+            this.txtIdCarta.Name = "txtIdCarta";
+            this.txtIdCarta.Size = new System.Drawing.Size(94, 20);
+            this.txtIdCarta.TabIndex = 29;
+            // 
+            // lblIdCarta
+            // 
+            this.lblIdCarta.AutoSize = true;
+            this.lblIdCarta.Location = new System.Drawing.Point(254, 216);
+            this.lblIdCarta.Name = "lblIdCarta";
+            this.lblIdCarta.Size = new System.Drawing.Size(73, 13);
+            this.lblIdCarta.TabIndex = 28;
+            this.lblIdCarta.Text = "Carta Jogada:";
+            // 
+            // btnApostar
+            // 
+            this.btnApostar.Location = new System.Drawing.Point(257, 299);
+            this.btnApostar.Name = "btnApostar";
+            this.btnApostar.Size = new System.Drawing.Size(167, 34);
+            this.btnApostar.TabIndex = 31;
+            this.btnApostar.Text = "Apostar";
+            this.btnApostar.UseVisualStyleBackColor = true;
+            this.btnApostar.Click += new System.EventHandler(this.btnApostar_Click);
+            // 
+            // btnJogar
+            // 
+            this.btnJogar.Location = new System.Drawing.Point(257, 259);
+            this.btnJogar.Name = "btnJogar";
+            this.btnJogar.Size = new System.Drawing.Size(167, 34);
+            this.btnJogar.TabIndex = 30;
+            this.btnJogar.Text = "Jogar";
+            this.btnJogar.UseVisualStyleBackColor = true;
+            this.btnJogar.Click += new System.EventHandler(this.btnJogar_Click);
+            // 
+            // lblValorCarta
+            // 
+            this.lblValorCarta.AutoSize = true;
+            this.lblValorCarta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.lblValorCarta.Location = new System.Drawing.Point(436, 319);
+            this.lblValorCarta.Name = "lblValorCarta";
+            this.lblValorCarta.Size = new System.Drawing.Size(103, 17);
+            this.lblValorCarta.TabIndex = 32;
+            this.lblValorCarta.Text = "Valor da Carta:";
+            // 
+            // lstJogadas
+            // 
+            this.lstJogadas.FormattingEnabled = true;
+            this.lstJogadas.Location = new System.Drawing.Point(777, 27);
+            this.lstJogadas.Name = "lstJogadas";
+            this.lstJogadas.Size = new System.Drawing.Size(131, 316);
+            this.lstJogadas.TabIndex = 33;
+            // 
+            // lblJogadas
+            // 
+            this.lblJogadas.AutoSize = true;
+            this.lblJogadas.Location = new System.Drawing.Point(774, 9);
+            this.lblJogadas.Name = "lblJogadas";
+            this.lblJogadas.Size = new System.Drawing.Size(123, 13);
+            this.lblJogadas.TabIndex = 34;
+            this.lblJogadas.Text = "Jogadas do Turno Atual:";
+            // 
+            // btnVerificarVez
+            // 
+            this.btnVerificarVez.Location = new System.Drawing.Point(439, 205);
+            this.btnVerificarVez.Name = "btnVerificarVez";
+            this.btnVerificarVez.Size = new System.Drawing.Size(167, 34);
+            this.btnVerificarVez.TabIndex = 35;
+            this.btnVerificarVez.Text = "Verificar Vez";
+            this.btnVerificarVez.UseVisualStyleBackColor = true;
+            this.btnVerificarVez.Click += new System.EventHandler(this.btnVerificarVez_Click);
             // 
             // PrimeiraEntrega
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 424);
+            this.ClientSize = new System.Drawing.Size(928, 384);
+            this.Controls.Add(this.btnVerificarVez);
+            this.Controls.Add(this.lblJogadas);
+            this.Controls.Add(this.lstJogadas);
+            this.Controls.Add(this.lblValorCarta);
+            this.Controls.Add(this.btnApostar);
+            this.Controls.Add(this.btnJogar);
+            this.Controls.Add(this.txtIdCarta);
+            this.Controls.Add(this.lblIdCarta);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstCartas);
             this.Controls.Add(this.lblTurno);
@@ -358,6 +447,14 @@ namespace PrimeiraEntrega
         private System.Windows.Forms.Label lblTurno;
         private System.Windows.Forms.ListBox lstCartas;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtIdCarta;
+        private System.Windows.Forms.Label lblIdCarta;
+        private System.Windows.Forms.Button btnApostar;
+        private System.Windows.Forms.Button btnJogar;
+        private System.Windows.Forms.Label lblValorCarta;
+        private System.Windows.Forms.ListBox lstJogadas;
+        private System.Windows.Forms.Label lblJogadas;
+        private System.Windows.Forms.Button btnVerificarVez;
     }
 }
 

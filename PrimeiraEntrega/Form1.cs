@@ -140,25 +140,31 @@ namespace PrimeiraEntrega
             }
             else
             {
+                lblStatus.Text = "Status: ";
                 string idPartida = txtIdPartida.Text;
-                string[] jogadores;
-                string jogadoresNaSala = Jogo.ListarJogadores(int.Parse(idPartida));
-                jogadoresNaSala = jogadoresNaSala.Replace("\r", "");
-                jogadoresNaSala = jogadoresNaSala.Substring(0, jogadoresNaSala.Length - 1);
-                jogadores = jogadoresNaSala.Split('\n');
-                string[] jogadorSorteado;
-                if (jogadores[0].Contains(retorno))
-                {
-                    jogadorSorteado = jogadores[0].Split(',');
-                    lblTurno.Text = "Turno do Jogador: " + jogadorSorteado[1] + "\n\r Id do Jogador: " + jogadorSorteado[0];
-                }
-                else
-                {
-                    jogadorSorteado = jogadores[1].Split(',');
-                    lblTurno.Text = "Turno do Jogador: " + jogadorSorteado[1] + "\n\r Id do Jogador: " + jogadorSorteado[0]; 
-                }
-                ExibirCartas(jogadores.Length);
+                ExibirTurno(retorno, idPartida);
             }
+        }
+
+        private void ExibirTurno(string retorno, string idPartida) // separei a função para reusar na verificação de vez e no iniciar partida
+        {
+            string[] jogadores;
+            string jogadoresNaSala = Jogo.ListarJogadores(int.Parse(idPartida));
+            jogadoresNaSala = jogadoresNaSala.Replace("\r", "");
+            jogadoresNaSala = jogadoresNaSala.Substring(0, jogadoresNaSala.Length - 1);
+            jogadores = jogadoresNaSala.Split('\n');
+            string[] jogadorSorteado;
+            if (jogadores[0].Contains(retorno))
+            {
+                jogadorSorteado = jogadores[0].Split(',');
+                lblTurno.Text = "Turno do Jogador: " + jogadorSorteado[1] + "\n\r Id do Jogador: " + jogadorSorteado[0];
+            }
+            else
+            {
+                jogadorSorteado = jogadores[1].Split(',');
+                lblTurno.Text = "Turno do Jogador: " + jogadorSorteado[1] + "\n\r Id do Jogador: " + jogadorSorteado[0];
+            }
+            ExibirCartas(jogadores.Length);
         }
 
         private void ExibirCartas(int jogadores)
@@ -176,10 +182,64 @@ namespace PrimeiraEntrega
             {
                 string dadosJogador = cartasJogador[i];
                 lstCartas.Items.Add(dadosJogador);
-                if (i == 11)
+                //tirei o if pois atualizando as cartas vai ficando desigual um lado do outro
+                /*if (i == 11)
                 {
                     lstCartas.Items.Add("\n");
-                }
+                }*/
+            }
+        }
+
+        private void btnJogar_Click(object sender, EventArgs e)
+        {
+            string idJogador = txtIdJogador.Text;
+            string senhaJogador = txtSenhaJogador.Text;
+            string posicaoCarta = txtIdCarta.Text;
+            string retorno = Jogo.Jogar(int.Parse(idJogador), senhaJogador, int.Parse(posicaoCarta)); //retorna o valor da carta jogada
+            if (retorno.Contains("ERRO"))
+            {
+                lblStatus.Text = "Status: " + retorno;
+            } else
+            {
+                lblStatus.Text = "Status: "; //limpa o status
+                lblValorCarta.Text = "Valor da Carta: " + retorno; //exibe o valor da carta jogada
+            }
+        }
+
+        private void btnApostar_Click(object sender, EventArgs e)
+        {
+            string idJogador = txtIdJogador.Text;
+            string senhaJogador = txtSenhaJogador.Text;
+            string posicaoCarta = txtIdCarta.Text;
+            string retorno = Jogo.Apostar(int.Parse(idJogador), senhaJogador, int.Parse(posicaoCarta)); //retorna o valor da carta
+            if (retorno.Contains("ERRO"))
+            {
+                lblStatus.Text = "Status: " + retorno;
+            }
+            else
+            {
+                lblStatus.Text = "Status: ";
+                lblValorCarta.Text = "Valor da Carta: " + retorno; //valor da carta apostada
+            }
+        }
+
+        private void btnVerificarVez_Click(object sender, EventArgs e)
+        {
+            string idPartida = txtIdPartida.Text;
+            string retorno = Jogo.VerificarVez(int.Parse(idPartida)); //retorna o historico da partida
+            retorno = retorno.Replace("/r", "");
+            retorno = retorno.Substring(0, retorno.Length - 1);
+
+            string[] info = retorno.Split('\n'); //info[0] exibe o turno atual e apartir do 1-(info.lenght-1) exibe as jogadas feitas
+
+            string[] roundAtual = info[0].Split(','); //isola o status da partida, id do jogador da vez, rodada, Se esta apostando ou jogando
+
+            ExibirTurno(roundAtual[1], idPartida); //manda o id do jogador da vez pra exibir o turno
+
+            lstJogadas.Items.Clear();
+            for(int i = 1; i < info.Length; i++)
+            {
+                lstJogadas.Items.Add(info[i]); //exibe as jogadas do turno atual
             }
         }
     }
